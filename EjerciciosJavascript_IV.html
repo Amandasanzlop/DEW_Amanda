@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // 2-    Realiza una función sumatoria utilizando “arguments”. Utiliza un bucle for. El usuario debe introducir 7 números. Resultado muéstralo en consola.
+
+    // function sumar(){
+    //     var sumatoria = 0;
+
+    //     if (arguments.length != 7){
+    //         throw "Error. Debe introducir siete números.";
+    //     }else{
+    //         for (i=0; i<arguments.length; i++)
+    //         sumatoria += arguments[i];
+    //     }    
+    //        return sumatoria; 
+    // }
+
+
+    // var esCorrecto = false;
+    
+    // do{
+    //     try{
+    //     var num1 = parseInt(prompt("Introduzca un número: "));
+    //     var num2 = parseInt(prompt("Introduzca un número: "));
+    //     var num3 = parseInt(prompt("Introduzca un número: "));
+    //     var num4 = parseInt(prompt("Introduzca un número: "));
+    //     var num5 = parseInt(prompt("Introduzca un número: "));
+    //     var num6 = parseInt(prompt("Introduzca un número: "));
+    //     var num7 = parseInt(prompt("Introduzca un número: "));
+    //     console.log(sumar(num1, num2, num3, num4, num5, num6, num7));
+    //     esCorrecto = true;
+    //     }catch(ex){
+    //         esCorrecto = false;
+    //         alert(ex);
+    //     }
+    // }while(esCorrecto == false);
+    
+    
+    
+    
+    
+
+    
+    // 3-    Realiza una función que calcule la media de 5 notas introducidas por el usuario. Utiliza “arguments”. Muestra el resultado por consola.
+
+    
+    // function calcularMedia(){
+    //     var acumulado = 0;
+    //     var contador = 0;
+    //     var media = 0;
+
+    //         if(arguments.length != 5){
+    //             throw "Error. Debe introducir cinco números.";
+    //         }else{
+    //             for (i=0; i<arguments.length; i++){
+    //             acumulado += arguments[i];
+    //             contador += 1;
+    //             }    
+    //         media = acumulado / contador;
+    //         return media; 
+    //         }
+
+    // }
+
+
+    // try{
+    //     var nota1 = parseInt(prompt("Introduzca una nota:"));
+    //     var nota2 = parseInt(prompt("Introduzca una nota:"));
+    //     var nota3 = parseInt(prompt("Introduzca una nota:"));
+    //     var nota4 = parseInt(prompt("Introduzca una nota:"));
+    //     var nota5 = parseInt(prompt("Introduzca una nota:"));
+
+    //     console.log(calcularMedia(nota1, nota2, nota3, nota4, nota5));
+    // }catch(ex){
+    //     alert(ex);
+    // }
+    
+    
+
+    
+    
+    // 4-    Realiza la validación de una matrícula de un coche 0000-XXX mediante expresiones regulares.
+
+        // function validarMatricula(matricula){
+        //     var expresion = /^[0-9]{4}-[A-Z]{3}/;
+
+        //     if(expresion.test(matricula)){
+        //         console.log("Es válida.");
+        //         alert("Es válida.");
+        //     }else{
+        //         console.log("NO es válida.");
+        //         alert("No es válida.");
+        //     }
+        // }
+       
+        // var matriculaUsuario = prompt("Introduzca una matrícula: ");
+        // validarMatricula(matriculaUsuario);
+
+    
+    
+    
+    
+    
+    // 5-    Valida un nombre de usuario en twitter, empieza por @ y puede contener letras mayúsculas y minúsculas, números, guiones y guiones bajos.
+
+            // var nombreUsuario = prompt("Introduzca un nombre de usuario: ");
+    
+            // var expresion = /^[@][a-zA-Z0-9\-_]+$/;
+            // if(expresion.test(nombreUsuario)){
+            //     alert("Nombre de usuario correcto.");
+            //     console.log("Nombre de usuario correcto.");
+            // }else{
+            //     alert("Nombre de usuario INCORRECTO.");
+            //     console.log("Nombre de usuario INCORRECTO.");
+            // }
+    
+    
+    
+    
+    // 6-    Crear una expresión regular que valide una dirección de email. Para simplificar, los valores antes de la @ pueden contener cualquier
+    // carácter alfanumérico, y los caracteres . y -, mientras que los valores tras la @ pueden contener caracteres alfanuméricos, y el tipo de 
+    //dominio puede tener una longitud de 2 o 3 caracteres.
+
+    // var emailUsuario = prompt("Introduzca una dirección de email: ");
+
+    // var expresion = /[0-9a-zA-Z\-.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}$/;
+    // if(expresion.test(emailUsuario)){
+    //     alert("Email correcto.");
+    //     console.log("Email correcto.");
+    // }else{
+    //     alert("Email NO válido.");
+    //     console.log("Email NO válido.");
+    // }
+    
+    
+    
+    
+    
+   
+   
+    // 7-    Crear una expresión regular valide una fecha en formato "XX/XX/XXXX", donde "X" es un dígito. Probarlo con la expresión:
+    // "Nací el 05/04/1982 en Donostia.".
+
+    // var texto = prompt("Introduzca un texto con una fecha en formato XX/XX/XXXX: ");
+
+    // var expresion = /[0-9]{2}\/[0-9]{2}\/[0-9]{4}/;
+    // if(expresion.test(texto)){
+    //     alert("Fecha correcta.");
+    //     console.log("Fecha correcta.");
+    // }else{
+    //     alert("Fecha NO válida.");
+    //     console.log("Fecha NO válida.");
+    // }
+    
+
+    
+    
+    
+    
+    
+    // 8-    Realiza 3 ejercicios anteriores utilizando funciones anónimas.
+
+    //A) 
+    
+    // var validarMatricula = function (matricula){
+    //         var expresion = /^[0-9]{4}-[A-Z]{3}/;
+
+    //         if(expresion.test(matricula)){
+    //             console.log("Se ha encontrado la cadena.");
+    //             alert("Se ha encontrado la cadena.");
+    //         }else{
+    //             console.log("No se ha encontrado la cadena");
+    //             alert("No ha encontrado la cadena.");
+    //         }
+    //     };
+
+    // var entrada = prompt("Introduzca una matrícula");
+    // console.log(validarMatricula(entrada));
+    // alert(validarMatricula(entrada));
+
+
+    //B)
+
+    // var validarUsuario = function (nombreUsuario){
+    //     var expresion = /^[@][a-zA-Z0-9\-_]+$/;
+    //     if(expresion.test(nombreUsuario)){
+    //         alert("Nombre de usuario correcto.");
+    //         console.log("Nombre de usuario correcto.");
+    //     }else{
+    //         alert("Nombre de usuario INCORRECTO.");
+    //         console.log("Nombre de usuario INCORRECTO.");
+    //     }
+    // };
+   
+    // var entrada = prompt("Introduzca un nombre de usuario:");
+    // console.log(validarUsuario(entrada));
+    // alert(validarUsuario(entrada));
+
+
+   //C)
+
+    // var validarEmail = function (emailUsuario){
+    //     var expresion = /[0-9a-zA-Z\-.]+@[a-zA-Z0-9]+.[a-zA-Z]{2,3}$/;
+    //     if(expresion.test(emailUsuario)){
+    //         alert("Email correcto.");
+    //         console.log("Email correcto.");
+    //     }else{
+    //         alert("Email NO válido.");
+    //         console.log("Email NO válido.");
+    //     }
+    // };
+   
+    // var entrada = prompt("Introduzca un email:");
+    // console.log(validarEmail(entrada));
+    // alert(validarEmail(entrada));
+
+    
+    
+    
+    
+    
+    
+    // 9-    Analiza los diferentes métodos de string y crea 3 ejercicios aplicados donde el usuario deba intervenir.
+
+            //A)
+            // var texto1 = prompt("Introduzca un nombre de destinatario: ");
+            // var texto2 = prompt("Introduzca un mensaje:");
+
+            // var destino = "Para: ";
+            // var mensaje = "\nMensaje: " + texto2;
+
+            // var textoFinal =  destino.concat(texto1, mensaje);
+
+            // alert(textoFinal);
+            // console.log(textoFinal);
+
+
+
+            //B)
+          
+            // var entrada = prompt("Introduzca una palabra para mostrar al revés: ");
+            // var resultado = "";
+            // var i;
+            // for (i = entrada.length - 1; i >= 0; i--) {
+            //         resultado += entrada.substring(i, i+1);
+
+            // }
+
+            // alert(resultado);
+            // console.log(resultado);
+
+
+
+            //C) 
+
+            // var texto = "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.";
+            // alert(texto);
+
+            // var palabraAbuscar = prompt("¿Qué palabra del texto desea sustituir?:");
+            // var palabraNueva = prompt("¿Qué palabra desea introducir en su lugar?:");
+
+            //     try{
+            //         var textoNuevo = texto.replace(palabraAbuscar,palabraNueva);
+
+            //         alert(textoNuevo);
+            //         console.log(textoNuevo);
+
+            //     }catch(error){
+            //         alert("Error. Palabra incorrecta.");
+            //         console.log("Error. Palabra incorrecta.");
+            //     }
+           
+    
+    // 10-  Analiza los diferentes métodos de arrays y crea 3 ejercicios aplicados donde el usuario deba intervenir.
+
+            //A)
+            // var diccionario = [];
+            // alert("Introduzca tres palabras en inglés y su significado en castellano.");      
+            // var palabra1 = prompt("Palabra en inglés: ");
+            // var significado1 = prompt("Significado: ");
+            // var palabra2 = prompt("Palabra en inglés: ");
+            // var significado2 = prompt("Significado: ");
+            // var palabra3 = prompt("Palabra en inglés: ");
+            // var significado3 = prompt("Significado: ");
+
+            // diccionario[palabra1] = significado1;
+            // diccionario[palabra2] = significado2;
+            // diccionario[palabra3] = significado3;
+
+
+            // document.write("Tu diccionario:" + "<br>" + "<br>");
+            // console.log("Tu diccionario:");
+            
+
+            // for(var clave in diccionario) {
+            //     document.write(clave+": " +diccionario[clave] + "<br>");
+            //     console.log(clave+": " +diccionario[clave]);
+            // }
+    
+    
+
+            //B)
+
+            // var parar = false;
+            // var respuesta = "";
+            // var listaCompra = [];
+
+            // do{
+            // respuesta = prompt("¿Desea introducir nuevos elementos a su lista de la compra?");
+            //     switch(respuesta.toLowerCase()){
+            //         case 'si':
+            //         var elemento = prompt("Introduzca un elemento a su lista: ");
+            //         listaCompra.push(elemento);
+            //         parar = false;
+            //         break;
+
+            //         case 'no':
+            //         parar = true;
+            //         break;
+
+            //         default:
+            //         console.log("Error. No he entendido su respuesta.");
+            //         alert("Error. No he entendido su respuesta."); 
+            //         parar = false;
+            //         break;
+            //     }
+            // }while(!parar);
+
+            // document.write("Lista de la compra: " + "<br><br>");
+            // console.log("Lista de la compra: ");
+
+            // for(i=0; i<listaCompra.length;i++){
+            //     document.write(listaCompra[i] + "<br>");
+            //     console.log(listaCompra[i]);
+            // }
+
+
+
+            //C)
+
+            // var parar = false;
+            // var respuesta = "";
+            // var listaCompra = [];
+
+            // do{
+            // respuesta = prompt("¿Desea introducir nuevos elementos a su lista de la compra?");
+            //     switch(respuesta.toLowerCase()){
+            //         case 'si':
+            //         var elemento = prompt("Introduzca un elemento a su lista: ");
+            //         listaCompra.push(elemento);
+            //         parar = false;
+            //         break;
+
+            //         case 'no':
+            //         parar = true;
+            //         break;
+
+            //         default:
+            //         console.log("Error. No he entendido su respuesta.");
+            //         alert("Error. No he entendido su respuesta."); 
+            //         parar = false;
+            //         break;
+            //     }
+            // }while(!parar);
+
+            // document.write("Lista de la compra: " + "<br><br>");
+            // console.log("Lista de la compra: ");
+
+            // listaCompra.forEach(element => document.write(element + "<br>"));
+            // listaCompra.forEach(element => console.log(element));
+
+            
+    
+
+    
+    </script>
+</body>
+</html>
