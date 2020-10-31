@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// ACTIVIDAD 1
+
+// Crea un script donde se realicen las siguientes acciones:
+
+// a) Pedir al usuario un nombre de titular, apellidos de titular y saldo de la cuenta.
+
+// var nombreTitular = prompt("Introduzca nombre del titular:");
+// var apellidosTitular = prompt("Introduzca apellidos del titular:");
+// var saldo = parseInt(prompt("Introduzca el saldo de la cuenta:"));
+
+// // b) Crear un nuevo objeto cuentaBancaria que se inicializará con los datos facilitados por el usuario.
+
+// var cuentaBancaria = new Object();
+// cuentaBancaria.nombreTitular = nombreTitular;
+// cuentaBancaria.apellidosTitular = apellidosTitular;
+// cuentaBancaria.saldo = saldo;
+
+// // c) Mostrar un mensaje informando de que se ha creado la nueva cuenta bancaria y de los datos asociados a la cuenta bancaria creada.
+
+// alert("Se ha creado la nueva cuenta con los siguientes datos: Nombre del titular: " + cuentaBancaria.nombreTitular + "// Apellidos del titular: "
+//  + cuentaBancaria.apellidosTitular + "// Saldo disponible: " + cuentaBancaria.saldo);
+
+
+
+
+
+
+
+// ACTIVIDAD 2
+
+// Vamos a crear una pequeña base de datos de viajeros para una agencia de viajes:
+
+//     1. Crea una estructura para guardar los datos de personas (nombre, apellidos, edad)
+
+        // class Persona {
+        //     constructor(nombre,apellidos,edad) {
+        //         this.nombre = nombre;
+        //         this.apellidos = apellidos;
+        //         this.edad = edad;
+        //     }
+            
+        // }
+        
+     
+//     2. A partir de la estructura anterior, vamos a añadir los datos de los viajeros: una lista de países visitados (los países NO se pueden repetir)
+//        y si tiene o no tarjeta de puntos en nuestra agencia 
+
+    //    class Viajero extends Persona {  //La clase Viajero hereda de Persona.
+    //        constructor(nombre, apellidos, edad, paisesVisitados, tieneTarjetaPuntos) {
+    //           super(nombre,apellidos,edad);  //Se llama al constructor de Persona.
+
+    //           this.paisesVisitados = []; //Países visitados es un array vacío.
+
+    //           //Se itera sobre el array recibido y se guarda en el atributo sólo aquellos que no están.
+    //           for(var i=0;i<paisesVisitados.length;i++){
+    //             if(this.paisesVisitados.indexOf(paisesVisitados[i]) == -1){ //indexOf busca el elemento que se le pasa y devuelve la posición en la que se encuentra. Si no está dentro del array, devuelve -1 y lo añadimos al atributo.
+    //                 this.paisesVisitados.push(paisesVisitados[i]);
+    //             }
+    //            }
+
+    //           this.tieneTarjetaPuntos = tieneTarjetaPuntos;
+              
+    //         }
+              
+    //     }
+
+     
+        
+
+
+
+
+//     3. Ahora crea otra estructura para guardar los datos de los viajeros, los identificaremos por un código de cliente de nuestra agencia
+
+            // var mapaDatosViajeros = new Map(); //Creamos un Map para almacenar los viajeros por clave/valor.
+            
+            
+
+
+
+
+
+//     4. Crea las siguientes funciones/métodos para gestionar nuestra base de datos:
+//         . Crear un nuevo viajero (debe comprobar si el código de cliente ya existe. Si es así, muestra un mensaje y no lo inserta)
+//         . Eliminar un viajero (identificado por su código de cliente)
+//         . Mostrar todos los viajeros (sus datos personales, qué países ha visitado y si tiene tarjeta)
+//         . Añadir un país a un viajero (identificado por su código de cliente)
+//         . Eliminar un país a un viajero (identificado por su código de cliente)
+
+//             function crearViajero(nombre, apellidos, edad, paisesVisitados, tieneTarjetaPuntos){
+//                 var viajero = new Viajero(nombre, apellidos, edad, paisesVisitados, tieneTarjetaPuntos);
+
+//                 if(mapaDatosViajeros == null || mapaDatosViajeros == undefined){ //Comprobamos si el mapa está vacío. Si es así, el primer Viajero tendrá código cliente 0.
+//                     mapaDatosViajeros.set(0, viajero);
+//                 }else{
+//                     var codigoCliente = mapaDatosViajeros.size; //Si ya hay elementos en el mapa, se calcula el código de cliente en base al tamaño del mapa.
+//                     mapaDatosViajeros.set(codigoCliente, viajero);
+//                 }
+//             }
+
+
+//             function eliminarViajero(codigoCliente){
+//                mapaDatosViajeros.delete(codigoCliente); 
+//             }
+
+
+//             function mostrarViajeros(){
+//                 const iterator1 = mapaDatosViajeros[Symbol.iterator]();
+
+//                 for (const item of iterator1) { //Se va iterando sobre los elementos del Map. item[0] almacena la clave actual, e item[1] el valor asociado.
+//                 var datos1 = "Código viajero: " + item[0] + " Nombre viajero: " + item[1].nombre + " Apellidos: " + item[1].apellidos + " Edad: " 
+//                     + item[1].edad + " Países visitados: " + item[1].paisesVisitados;
+
+//                 var datos2 = (item[1].tieneTarjetaPuntos ? " Tiene" : " No tiene") + " tarjeta de puntos.";
+
+//                 console.log(datos1 + datos2);
+                    
+//                 }
+
+//             }
+
+
+//             function aniadirPais(codigoCliente, pais){
+
+//                 mapaDatosViajeros.get(codigoCliente).paisesVisitados.push(pais);
+//             }
+
+
+//             function eliminarPais(codigoCliente, pais){
+
+//                 for(i=0;i<mapaDatosViajeros.get(codigoCliente).paisesVisitados.length;i++){ //Se obtiene el cliente por la clave y se modifica el array de países.
+//                     if(mapaDatosViajeros.get(codigoCliente).paisesVisitados[i] == pais){
+//                         mapaDatosViajeros.get(codigoCliente).paisesVisitados.splice(i,1);
+//                     }
+//                 }
+//             }
+
+         
+
+
+
+
+// //     5. Haz algunas pruebas para comprobar que todo funciona bien, realizando llamadas a las funciones/métodos antes creados.
+
+//         var paises1 = ["Perú", "Grecia", "Perú"];
+//         var paises2 = ["Lituania","Lituania", "Rumanía"];
+//         var paises3 = ["Irlanda", "Japón", "México"];
+//         crearViajero("Luis","S",50,paises1,false);
+//         crearViajero("Pepe", "B", 60, paises2, true);
+//         crearViajero("Carmen", "C", 40, paises3, false);
+
+        
+//         mostrarViajeros(); //Antes de los cambios.
+
+//         aniadirPais(1,"Uruguay");
+
+//         eliminarPais(2, "México");
+//         eliminarPais(2, "Irlanda");
+//         eliminarPais(2, "Japón");
+
+//         mostrarViajeros(); //Después de los cambios.
+
+
+
+
+
+
+
+
+//ACTIVIDAD 3
+
+// Analiza el siguiente código y comenta las sentencias.
+
+// const tropicalBasket = {        //Se crea un array asociativo de frutas tropicales como una constante, donde los elementos son las frutas con la cantidad que hay de cada una.
+
+//     bananas: 3,
+
+//     papayas: 0,
+
+//     oranges: 7,
+
+//     watermelons: 4
+
+// };
+
+// const smallBasket = {           //Se crea otro array asociativo con frutas pequeñas como una constante. Del mismo modo, los elementos son las distintas frutas unidas a la cantidad que hay de cada una.
+
+//     strawberries: 8,
+
+//     grapes: 12 };
+
+// const getFruitsDescription = (basket) => {  //Se crea una función flecha a la que se le pasa un array.
+
+//     const fruitsListed = Object.keys(basket); //Se guardan en una constante los elementos asociados a las claves del array.
+
+//     const fruitsAvailable = fruitsListed.filter((fruit) => {return basket[fruit] > 0; //Se filtran las frutas del array, seleccionando sólo aquellas cuya cantidad es superior a 0.
+
+//     });
+
+//     return 'This basket has: ' + fruitsAvailable.join(', '); //Se devuelven las frutas concatenadas del array cuyo valor es superior a 0.
+
+// };
+
+// console.log(getFruitsDescription(tropicalBasket)); console.log(getFruitsDescription(smallBasket)); //Se imprimen, de cada array de frutas creado anteriormente, aquellas con valor superior a 0.
+
+ 
+
+
+
+
+
+// ACTIVIDAD 4
+
+// Analiza el siguiente código y comenta las sentencias.
+
+//const animal = {};
+
+//Object.defineProperty(animal, 'isHuman', {  // Se define una nueva propiedad para el objeto animal
+
+    //value: false, // El valor de la nueva propiedad es False
+
+    //enumerable: false }); // La propiedad no será mostrada cuando se enumeren las propiedades del objeto
+
+//const dinosaur = Object.create(animal); // Se crrea un nuevo objeto usando el prototipo de animal
+
+//Object.defineProperty(dinosaur, 'isExtinct', { // Mismo caso que el anterior, pero para dinosaur
+
+    //value: true,
+
+    //enumerable: false });
+
+//const tRex = Object.create(dinosaur); // Se crea un nuevo objeto usando el prototipo de dinosaur
+
+//Object.defineProperty(tRex, 'legs', { // Mimos caso anterior, pero para tRex
+
+    //value: 4,
+
+    //enumerable: false });
+
+//function getAllPropertiesOf(something) { // Se listan todas las propiedades de un objeto de manera recursiva
+
+    //let properties = [];
+
+    //let proto = something;
+
+    //while (proto !== Object.prototype) {
+
+        //properties = properties.concat(Object.getOwnPropertyNames(proto));
+
+        //proto = Object.getPrototypeOf(proto);     }
+
+    //return properties; }
+
+//console.log(getAllPropertiesOf(tRex));
+
+ 
+
+
+
+
+
+// ACTIVIDAD 5
+
+// Realiza la actividad 1 utilizando clases.
+
+// a) Pedir al usuario un nombre de titular, apellidos de titular y saldo de la cuenta.
+
+//     class Titular {
+//         constructor(nombre,apellidos,saldo) {
+//             this.nombre = nombre;
+//             this.apellidos = apellidos;
+//             this.saldo = saldo;
+//         }
+                
+//     }
+
+// var nombreTitular = prompt("Introduzca un nombre de titular: ");
+// var apellidosTitular = prompt("Introduzca los apellidos: ");
+// var saldoCuenta = prompt("Introduzca el saldo de la cuenta: ");   
+
+// var titular = new Titular(nombreTitular, apellidosTitular, saldoCuenta);
+
+// console.log("Nombre titular: " + titular.nombre + " Apellidos: " + titular.apellidos + " Saldo de la cuenta: " + titular.saldo);
+// alert("Nombre titular: " + titular.nombre + " Apellidos: " + titular.apellidos + " Saldo de la cuenta: " + titular.saldo);
+            
+
+// // b) Crear un nuevo objeto cuentaBancaria que se inicializará con los datos facilitados por el usuario.
+
+// class CuentaBancaria extends Titular{                                                                                        
+//     constructor(nombreTitular, apellidosTitular, saldoCuenta){
+//         super(nombreTitular, apellidosTitular, saldoCuenta);
+
+//         this.nombreTitular = nombreTitular;
+//         this.apellidosTitular = apellidosTitular;
+//         this.saldoCuenta = saldoCuenta;
+//     }
+// }
+
+
+// var cuentaBancaria = new CuentaBancaria(nombreTitular, apellidosTitular, saldoCuenta);
+
+
+// // c) Mostrar un mensaje informando de que se ha creado la nueva cuenta bancaria y de los datos asociados a la cuenta bancaria creada.
+
+// function obtenerDatosCuenta(cuentaBancaria){
+//     console.log("Cuenta creada correctamente.");
+//     console.log("Nombre titular: " + cuentaBancaria.nombre + " Apellidos: " + cuentaBancaria.apellidos + " Saldo de la cuenta: " + cuentaBancaria.saldo);
+
+//     alert("Cuenta creada correctamente.");
+//     alert("Nombre titular: " + cuentaBancaria.nombre + " Apellidos: " + cuentaBancaria.apellidos + " Saldo de la cuenta: " + cuentaBancaria.saldo);
+// }
+
+// obtenerDatosCuenta(cuentaBancaria);
+
+
+
+    </script>
+</body>
+</html>
