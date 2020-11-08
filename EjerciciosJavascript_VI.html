@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<!--//     ACTIVIDAD 1
+
+// Crea dos botones en un documento html que al pulsar, uno abra una nueva ventana de ancho 200px y alto 100px con la siguiente información:
+
+// Nombre de la ventana, Ancho externo, Alto externo, Ancho interno, Alto interno, Scroll H, Scroll V, Distancia desde la izquierda y Distancia
+// desde arriba.
+
+// Y el otro botón que sea capaz de cerrar esa nueva ventana abierta. -->
+
+<!-- 
+<input type="button" value="Nueva ventana" onclick="abrirVentana()" />
+
+<input name="button" type="button" onclick="cerrarVentana()" value="Cerrar esta ventana" />
+
+<script>
+var nuevaVentana;
+
+//Se abre una nueva ventana y se guarda la refencia a ella en una variable global.
+function abrirVentana(){
+    nuevaVentana = window.open('./Nueva_ventana_VI.html','Nueva ventana','width=200,height=100,left=50,top=50,toolbar=yes');
+}
+
+//Al almacenar la referencia conseguimos cerrar la ventana que abrimos anteriormente en lugar de la actual.
+function cerrarVentana(){
+    nuevaVentana.close();
+}
+</script> -->
+
+
+
+
+
+
+
+<!--// ACTIVIDAD 2
+
+// Crea tres botones en un documento html que al pulsar, uno te permita visitar la página anterior. Otro que al pulsar te permita visitar la página siguiente.
+// Y un tercero que permita ir a una página concreta que el usuario haya introducido. Muestra la cantidad de páginas del historial. -->
+
+<!-- <button onclick="irAtras()">Ir atrás</button>
+<button onclick="irAdelante()">Ir adelante</button>
+<button onclick="visitarPagina()">Visitar página</button>
+
+<script>
+    function irAtras(){
+        window.history.back();
+    }
+
+
+    function irAdelante(){
+        window.history.forward();
+    }
+
+    function visitarPagina(){
+        var direccion = prompt("¿A dónde desea ir?");
+        window.location.href = direccion;
+    }
+
+    document.write("<br>" + "Cantidad de páginas visitadas: " + window.history.length);
+</script>
+-->
+
+
+
+
+
+
+
+<!--// ACTIVIDAD 3
+
+// Crea un botón en un documento html que al pulsar, el script averigüe si el usuario está conectado a Internet y le devuelva en una nueva ventana el
+// nombre y versión del navegador, el idioma y si tiene activadas o no las cookies y Java. -->
+
+<!-- 
+<button onclick="comprobarDatos()">Comprobar datos</button>
+
+<script>
+function comprobarDatos(){
+    var conexionActivada = navigator.onLine;
+
+    if(conexionActivada){
+        document.write("La conexión está activada.");
+    }else{
+        document.write("La conexión NO está activada.");
+    }
+
+    window.open('./datosNavegador_VI.html','Datos navegador');
+}
+
+</script> -->
+
+
+
+
+
+
+<!--// ACTIVIDAD 4
+
+// Usando location, crea un botón en un documento html que al pulsar, el script asigne la web www.google.com y se pueda ver el historial de la ventana. 
+//Crea otro botón igual, pero que no se pueda ver el historial de la venta.-->
+
+<!-- <button onclick="visitarGoogleHistorial()">Ir a Google (con historial)</button>
+<button onclick="visitarGoogleSinHistorial()">Ir a Google (sin historial)</button>
+
+<script>
+    function visitarGoogleHistorial(){
+        window.location.href = "http://www.google.com";
+    }
+
+    function visitarGoogleSinHistorial(){
+        window.location.replace("http://www.google.com");
+    }
+</script> -->
+
+
+
+
+
+
+<!--// ACTIVIDAD 5
+
+// Averigua utilizando el objeto screen, el tamaño de la barra de tareas de Windows. Crea un botón en un documento html que al pulsar, abra una nueva 
+//ventana y muestre esa información.-->
+
+<!-- <button onclick="window.open('./InformacionPantalla_VI.html')">Información pantalla</button> -->
+
+
+
+
+
+
+
+<!--// ACTIVIDAD 6
+
+// Cree una página web donde aparezcan los siguientes botones: 
+
+// Abrir Ventana: abrirá una ventana de tamaño 400px*400px con la dirección www.google.es. La nueva ventana deberá aparecer centrada en la pantalla. 
+
+// Cerrar Ventana: deberá cerrar la ventana que se acaba de crear. Si la ventana aún no se ha creado o bien el usuario la cerró, deberá mostrar un error
+// que diga “No hay ventana que cerrar”. 
+
+// Ampliar: modificará el tamaño de la ventana aumentando tanto el ancho como en 30px. Se mostrará un mensaje de error cuando no se pueda ampliar el alto
+// o el ancho. NOTA: para que funcione este y los siguientes apartados tiene que abrir una ventana en blanco, para ello quite la dirección www.google.es 
+
+// Reducir: modificará el tamaño de la ventana disminuyendo tanto el ancho como en 30px. Se mostrará un mensaje de error cuando no se pueda reducir el
+// alto o el ancho. 
+
+// Mover: Ubicará la pantalla en la posición indicada previamente por el usuario (x e y). Los valores tendrán que ser enteros positivos. Antes de mover
+// la nueva pantalla tendrá que comprobar que la nueva posición de la ventana es posible teniendo en cuenta tanto la posición como su alto y ancho y el
+// tamaño de la pantalla. -->
+    
+    
+<!-- <button onclick="abrirVentana()">Abrir ventana</button>
+<button onclick="abrirVentanaEnBlanco()">Abrir ventana en blanco</button>
+<button onclick="cerrarVentana()">Cerrar ventana</button>
+<button onclick="ampliar()">Ampliar</button>
+<button onclick="reducir()">Reducir</button>
+<button>Mover</button>
+
+<script>
+
+var nuevaVentana;
+
+function abrirVentana(){
+    nuevaVentana = window.open('http://www.google.com','','width=400,height=400,toolbar=yes');
+}
+
+function abrirVentanaEnBlanco(){
+    nuevaVentana = window.open('','','width=400,height=400,toolbar=yes');
+}
+
+function cerrarVentana(){
+   
+    if(nuevaVentana == undefined){  
+        alert("NO hay ventana que cerrar");
+    }else{
+        nuevaVentana.close();
+        nuevaVentana = undefined; //Cuando se cierra la ventana se elimina la referencia a la ventana anterior y así no se puede cerrar de nuevo.
+    }
+}
+
+function ampliar(){
+    if(nuevaVentana == undefined){
+        alert("NO hay ventana que ampliar");
+    }else if((screen.availWidth <= nuevaVentana.outerWidth + 30) || (screen.availHeight <= nuevaVentana.outerHeight + 30)){
+        alert("NO se puede ampliar más.");
+    }else{
+        nuevaVentana.resizeTo(nuevaVentana.outerWidth + 30, nuevaVentana.outerHeight + 30);
+    }   
+}
+
+
+function reducir(){
+    
+    if(nuevaVentana == undefined){
+        alert("NO hay ventana que reducir");
+    }else if((nuevaVentana.outerWidth - 30 < 100) || (nuevaVentana.outerHeight - 30 < 100)){
+        alert("NO se puede reducir más.");
+    }else{
+        nuevaVentana.resizeTo(nuevaVentana.outerWidth - 30, nuevaVentana.outerHeight - 30);
+    } 
+}
+
+</script>
+    
+ 
+</body>
+</html> -->

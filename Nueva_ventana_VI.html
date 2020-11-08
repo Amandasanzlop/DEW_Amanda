@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nueva ventana</title>
+</head>
+<body>
+
+      
+<!--//     ACTIVIDAD 1
+
+// Crea dos botones en un documento html que al pulsar, uno abra una nueva ventana de ancho 200px y alto 100px con la siguiente información:
+
+// Nombre de la ventana, Ancho externo, Alto externo, Ancho interno, Alto interno, Scroll H, Scroll V, Distancia desde la izquierda y Distancia
+// desde arriba.
+
+// Y el otro botón que sea capaz de cerrar esa nueva ventana abierta. -->
+    
+
+    
+    <script>
+   
+      var nombreVentana = window.name;
+      var altoExterno = window.outerHeight;
+      var anchoExterno = window.outerWidth;
+      var altoInterno = window.innerHeight;
+      var anchoInterno = window.innerWidth;
+      var scrollH = window.scrollX;
+      var scrollV = window.scrollY;
+      var distanciaIzquierda = window.screenLeft;
+      var distanciaArriba = window.screenTop;
+
+      document.write("Nombre de la ventana: " + nombreVentana + "<br>");
+      document.write("Ancho externo: " + anchoExterno + "<br>");
+      document.write("Alto externo: " + altoExterno + "<br>");
+      document.write("Ancho interno: " + anchoInterno + "<br>");
+      document.write("Alto interno: " + altoInterno + "<br>");
+      document.write("Scroll H: " + scrollH + "<br>");
+      document.write("Scroll V: " + scrollV + "<br>");
+      document.write("Distancia izquierda: " + distanciaIzquierda + "<br>");
+      document.write("Distancia arriba: " + distanciaArriba + "<br>");
+
+      
+
+    </script>
+</body>
+</html>
